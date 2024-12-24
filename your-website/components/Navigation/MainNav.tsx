@@ -21,7 +21,7 @@ const MainNav = () => {
               href="/"
               className="text-xl font-bold text-gray-800 hover:text-blue-600"
             >
-              [Your Name]
+              [Akku Mahesh]
             </Link>
           </div>
 

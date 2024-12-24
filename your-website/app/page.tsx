@@ -1,6 +1,9 @@
 'use client';
 import React from 'react';
+import Link from 'next/link';
 import TransitionSection from '@/components/Transitions/TransitionSection';
+import NetworkAnimation from '@/components/NetworkAnimation';
+
 
 export default function Home() {
   return (
@@ -33,72 +36,28 @@ export default function Home() {
               </p>
 
               <div className="flex gap-4">
-                
+                <Link
                   href="/projects"
                   className="px-8 py-4 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition"
                 >
                   View Projects
-                </a>
-                
+                </Link>
+                <Link
                   href="/about"
                   className="px-8 py-4 border border-blue-400 text-blue-300 rounded-lg hover:bg-blue-900/50 transition"
                 >
                   About Me
-                </a>
+                </Link>
               </div>
             </div>
 
             {/* Right Visual */}
-            <div className="relative hidden md:block">
-              <div className="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-3xl blur-3xl"></div>
-              <div className="relative aspect-square rounded-3xl bg-slate-800/50 border border-blue-500/20 p-8">
-                {/* You can add an appropriate visualization or geometric pattern here */}
-              </div>
-            </div>
+            <NetworkAnimation />
           </div>
         </div>
       </section>
 
       <TransitionSection />
-
-      {/* Skills Section */}
-      <section className="py-16 bg-slate-800 text-white">
-        <div className="max-w-6xl mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-12">
-            Technical Expertise
-          </h2>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            <div className="p-6 text-center bg-slate-700 rounded-xl hover:transform hover:scale-105 transition duration-300">
-              <div className="text-4xl mb-3">🤖</div>
-              <h3 className="font-semibold mb-2">Machine Learning</h3>
-              <p className="text-sm text-gray-300">
-                Deep Learning, Neural Networks, NLP
-              </p>
-            </div>
-            <div className="p-6 text-center bg-slate-700 rounded-xl hover:transform hover:scale-105 transition duration-300">
-              <div className="text-4xl mb-3">💻</div>
-              <h3 className="font-semibold mb-2">Programming</h3>
-              <p className="text-sm text-gray-300">
-                Python, TensorFlow, PyTorch
-              </p>
-            </div>
-            <div className="p-6 text-center bg-slate-700 rounded-xl hover:transform hover:scale-105 transition duration-300">
-              <div className="text-4xl mb-3">📊</div>
-              <h3 className="font-semibold mb-2">Data Science</h3>
-              <p className="text-sm text-gray-300">
-                Analysis, Visualization, Statistics
-              </p>
-            </div>
-            <div className="p-6 text-center bg-slate-700 rounded-xl hover:transform hover:scale-105 transition duration-300">
-              <div className="text-4xl mb-3">🔍</div>
-              <h3 className="font-semibold mb-2">Research</h3>
-              <p className="text-sm text-gray-300">
-                Academic Writing, Ethics, Innovation
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* Work & Updates Section */}
       <section className="py-16 bg-gradient-to-b from-slate-800 to-slate-900 text-white">
@@ -190,18 +149,18 @@ export default function Home() {
             the future of technology?
           </p>
           <div className="flex justify-center space-x-6">
-            
+            <Link
               href="/contact"
               className="px-6 py-3 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition"
             >
               Get in Touch
-            </a>
-            
+            </Link>
+            <Link
               href="https://github.com/yourusername"
               className="px-6 py-3 border border-gray-600 rounded-lg hover:border-gray-400 transition"
             >
               GitHub Profile
-            </a>
+            </Link>
           </div>
         </div>
       </section>
