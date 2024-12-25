@@ -17,12 +17,14 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={`${inter.className} flex flex-col min-h-screen`}>
         <MainNav />
-        <main>{children}</main>
-        <footer className="mt-auto py-8 bg-gray-50">
-          <div className="max-w-6xl mx-auto px-4 text-center text-gray-600">
-            <p>© {new Date().getFullYear()} Sankeerth Mahesh. All rights reserved.</p>
+        <main className="flex-grow">{children}</main>
+        <footer className="py-8 bg-slate-950 border-t border-blue-500/20"> 
+          <div className="max-w-6xl mx-auto px-4 text-center">
+            <p className="text-gray-400 text-sm"> 
+              © {new Date().getFullYear()} Sankeerth Mahesh. All rights reserved.
+            </p>
           </div>
         </footer>
       </body>

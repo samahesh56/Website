@@ -1,4 +1,3 @@
-// components/NetworkAnimation.tsx
 'use client';
 import { useEffect, useRef } from 'react';
 
@@ -20,39 +19,44 @@ const NetworkAnimation: React.FC = () => {
   const svgRef = useRef<SVGSVGElement>(null);
   const animationRef = useRef<number | null>(null);
 
-const createNode = (x: number, y: number) => `
-  <circle 
-    cx="${x}" 
-    cy="${y}" 
-    r="2"
-    fill="#60A5FA">
-    <animate
-      attributeName="r"
-      values="2;3;2"
-      dur="3s"
-      repeatCount="indefinite"
-    />
-    <animate
-      attributeName="fill-opacity"
-      values="0.3;1;0.3"
-      dur="3s"
-      repeatCount="indefinite"
-    />
-  </circle>
-`;
 
-
-  const createConnection = (x1: number, y1: number, x2: number, y2: number) => `
-    <line 
-      x1="${x1}" 
-      y1="${y1}" 
-      x2="${x2}" 
-      y2="${y2}" 
-      stroke="#60A5FA" 
-      stroke-width="0.5" 
-      stroke-opacity="0.3"
-    />
+  const createNode = (x: number, y: number) => `
+    <circle 
+      cx="${x}" 
+      cy="${y}" 
+      r="2.5"
+      fill="#60A5FA">
+      <animate
+        attributeName="r"
+        values="2.5;3.5;2.5"
+        dur="3s"
+        repeatCount="indefinite"
+      />
+      <animate
+        attributeName="fill-opacity"
+        values="0.4;0.8;0.4"
+        dur="3s"
+        repeatCount="indefinite"
+      />
+    </circle>
   `;
+
+  const createConnection = (x1: number, y1: number, x2: number, y2: number) => {
+    const distance = Math.hypot(x2 - x1, y2 - y1);
+    const opacity = Math.max(0.15, 0.5 - (distance / 200)); // Increased base opacity
+    
+    return `
+      <line 
+        x1="${x1}" 
+        y1="${y1}" 
+        x2="${x2}" 
+        y2="${y2}" 
+        stroke="#60A5FA" 
+        stroke-width="0.8"
+        stroke-opacity="${opacity}"
+      />
+    `;
+  };
 
   useEffect(() => {
     if (!svgRef.current) return;
@@ -60,16 +64,24 @@ const createNode = (x: number, y: number) => `
     const nodes: Node[] = [];
     const width = 600;
     const height = 600;
+    const gridSize = Math.floor(Math.sqrt(40)); // Increased to 40 nodes
+    const cellWidth = width / gridSize;
+    const cellHeight = height / gridSize;
     
-    // Create random nodes with velocity
-    for (let i = 0; i < 50; i++) {
-      nodes.push({
-        x: Math.random() * width,
-        y: Math.random() * height,
-        vx: (Math.random() - 0.5) * 0.5, // Random velocity
-        vy: (Math.random() - 0.5) * 0.5
-      });
+    for (let i = 0; i < gridSize; i++) {
+      for (let j = 0; j < gridSize; j++) {
+        const offsetX = (Math.random() - 0.5) * cellWidth * 0.9;
+        const offsetY = (Math.random() - 0.5) * cellHeight * 0.9;
+        
+        nodes.push({
+          x: (i + 0.5) * cellWidth + offsetX,
+          y: (j + 0.5) * cellHeight + offsetY,
+          vx: (Math.random() - 0.5) * 0.6,
+          vy: (Math.random() - 0.5) * 0.6
+        });
+      }
     }
+
 
     const animate = () => {
       if (!svgRef.current) return;
@@ -79,9 +91,20 @@ const createNode = (x: number, y: number) => `
         node.x += node.vx!;
         node.y += node.vy!;
 
-        // Bounce off walls
-        if (node.x <= 0 || node.x >= width) node.vx! *= -1;
-        if (node.y <= 0 || node.y >= height) node.vy! *= -1;
+        // Bounce off walls with less energy loss
+        if (node.x <= 0 || node.x >= width) {
+            node.vx! *= -0.95; // Slight energy loss on bounce, but maintains more speed
+            node.x = node.x <= 0 ? 0 : width;
+        }
+        if (node.y <= 0 || node.y >= height) {
+            node.vy! *= -0.95;
+            node.y = node.y <= 0 ? 0 : height;
+        }
+
+        if (Math.random() < 0.02) { // 2% chance each frame
+            node.vx! += (Math.random() - 0.5) * 0.2;
+            node.vy! += (Math.random() - 0.5) * 0.2;
+          }
       });
 
       // Create connections
@@ -89,7 +112,7 @@ const createNode = (x: number, y: number) => `
       nodes.forEach((node, i) => {
         nodes.slice(i + 1).forEach(otherNode => {
           const distance = Math.hypot(node.x - otherNode.x, node.y - otherNode.y);
-          if (distance < 100) {
+          if (distance < 150) { // Increased from 100 to 150
             connections.push({
               x1: node.x,
               y1: node.y,
