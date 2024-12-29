@@ -2,6 +2,8 @@ import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.css';
 import MainNav from '@/components/Navigation/MainNav';
+import Footer from '@/components/Layout/Footer';
+import PageTransition from '@/components/PageTransition';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -17,16 +19,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${inter.className} flex flex-col min-h-screen`}>
+      <body className={`${inter.className} flex flex-col min-h-screen bg-slate-950 text-gray-100`}>
         <MainNav />
-        <main className="flex-grow">{children}</main>
-        <footer className="py-8 bg-slate-950 border-t border-blue-500/20"> 
-          <div className="max-w-6xl mx-auto px-4 text-center">
-            <p className="text-gray-400 text-sm"> 
-              © {new Date().getFullYear()} Sankeerth Mahesh. All rights reserved.
-            </p>
-          </div>
-        </footer>
+        <PageTransition>
+          <main className="flex-grow pt-16">{children}</main>
+        </PageTransition>
+        <Footer />
       </body>
     </html>
   );

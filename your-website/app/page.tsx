@@ -8,9 +8,9 @@ import { motion } from 'framer-motion';
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50 flex flex-col">
       {/* Hero Section */}
-      <section className="min-h-screen bg-gradient-to-r from-slate-900 via-blue-900 to-slate-900 text-white relative overflow-hidden flex items-center">
+      <section className="min-h-screen bg-gradient-to-r from-slate-900 via-blue-900 to-slate-900 text-white relative overflow-hidden flex items-center -mt-16">
         <div className="absolute inset-0 opacity-20">
           <div className="absolute top-20 left-20 w-96 h-96 bg-blue-400 rounded-full mix-blend-multiply filter blur-xl animate-blob"></div>
           <div className="absolute top-40 right-20 w-96 h-96 bg-indigo-400 rounded-full mix-blend-multiply filter blur-xl animate-blob animation-delay-2000"></div>

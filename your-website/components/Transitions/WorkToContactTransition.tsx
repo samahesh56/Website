@@ -14,9 +14,9 @@ export default function WorkToContactTransition() {
   const opacity = useTransform(scrollYProgress, [0, 0.5, 1], [0, 1, 0.8]);
 
   return (
-    <section ref={sectionRef} className="relative py-16 bg-gradient-to-b from-slate-900 to-slate-800">
+    <section ref={sectionRef} className="relative py-16 pb-0 bg-gradient-to-b from-slate-900 to-slate-800">
       <motion.div 
-        className="max-w-4xl mx-auto px-4 text-center space-y-12"
+        className="max-w-4xl mx-auto px-4 text-center space-y-12 pb-24"
         style={{ y, opacity }}
       >
         <motion.div
