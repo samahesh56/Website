@@ -2,8 +2,7 @@ import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.css';
 import MainNav from '@/components/Navigation/MainNav';
-import Footer from '@/components/Layout/Footer';
-import PageTransition from '@/components/PageTransition';
+import PageTransition from '@/components/Animation/PageTransition';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -24,7 +23,6 @@ export default function RootLayout({
         <PageTransition>
           <main className="flex-grow pt-16">{children}</main>
         </PageTransition>
-        <Footer />
       </body>
     </html>
   );

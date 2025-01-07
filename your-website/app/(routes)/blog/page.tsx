@@ -1,5 +1,6 @@
 // app/blog/page.tsx
-import { getAllPosts } from '@/lib/utils/blog';  // Make sure this path is correct
+import { MainLayout } from '@/components/Layout/MainLayout';
+import { getAllPosts } from '@/lib/utils/blog';  
 import { PostCard } from '@/components/blog/PostCard';
 
 export default async function BlogPage() {
@@ -7,22 +8,26 @@ export default async function BlogPage() {
     const posts = await getAllPosts();
 
     return (
-      <div className="max-w-4xl mx-auto py-12 px-4">
-        <h1 className="text-4xl font-bold mb-8">Blog</h1>
+      <MainLayout>
+        <h1 className="text-4xl font-bold mb-8 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+          Blog
+        </h1>
         <div className="grid gap-8 md:grid-cols-2">
           {posts.map(post => (
             <PostCard key={post.slug} post={post} />
           ))}
         </div>
-      </div>
+      </MainLayout>
     );
   } catch (error) {
     console.error('Error fetching posts:', error);
     return (
-      <div className="max-w-4xl mx-auto py-12 px-4">
-        <h1 className="text-4xl font-bold mb-8">Blog</h1>
-        <p>Unable to load blog posts at this time.</p>
-      </div>
+      <MainLayout>
+        <h1 className="text-4xl font-bold mb-8 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+          Blog
+        </h1>
+        <p className="text-gray-300">Unable to load blog posts at this time.</p>
+      </MainLayout>
     );
   }
 }

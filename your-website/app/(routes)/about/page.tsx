@@ -2,6 +2,7 @@
 'use client';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
+import { MainLayout } from '@/components/Layout/MainLayout';
 // import { SocialLinks } from '@/components/shared/SocialLinks';
 
 const fadeIn = {
@@ -12,7 +13,7 @@ const fadeIn = {
 
 export default function AboutPage() {
   return (
-    <main className="container mx-auto px-4 py-8">
+    <MainLayout>
       {/* Top Section */}
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
         {/* Profile Image */}
@@ -88,7 +89,7 @@ export default function AboutPage() {
         {/* Quick Facts */}
         <motion.div 
           {...fadeIn}
-          className="lg:col-span-4"
+          className="lg:col-span-4 pt-0"
         >
           <div className="bg-slate-900/50 backdrop-blur-sm rounded-xl p-5 shadow-xl ring-1 ring-blue-500/20">
             <h2 className="text-xl font-semibold mb-4 text-white">Quick Facts</h2>
@@ -112,7 +113,7 @@ export default function AboutPage() {
         {/* Education */}
         <motion.div 
             {...fadeIn}
-            className="lg:col-span-8"
+            className="lg:col-span-8 -mt-[3.625rem]"
             >
             <div className="bg-slate-900/50 backdrop-blur-sm rounded-xl p-6 shadow-xl ring-1 ring-blue-500/20">
                 <h2 className="text-xl font-semibold mb-4 text-white">Education</h2>
@@ -148,6 +149,6 @@ export default function AboutPage() {
             </div>
         </motion.div>
       </div>
-    </main>
+    </MainLayout>
   );
 }
