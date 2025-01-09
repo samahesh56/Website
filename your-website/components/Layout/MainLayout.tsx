@@ -14,7 +14,7 @@ export const MainLayout = ({ children }: { children: React.ReactNode }) => {
         <PageTransition>
           <main
             className={`${
-              !isHomePage ? 'container mx-auto px-4 sm:px-6 lg:px-8 py-24' : ''
+              !isHomePage ? 'container mx-auto px-4 sm:px-6 lg:px-8 py-8' : ''
             }`}
           >
             {children}

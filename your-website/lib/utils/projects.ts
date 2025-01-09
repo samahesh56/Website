@@ -8,19 +8,12 @@ export const projects: Project[] = [
     title: 'GPT API Wrapper Application',
     shortDescription:
       "A sophisticated Python-based interface for OpenAI's GPT models with conversation management and cost optimization",
-    fullDescription: `A comprehensive wrapper application that provides an intuitive interface 
-    to OpenAI's GPT models while managing API costs and conversation history efficiently. 
-    The tool features a GUI for easy interaction, conversation persistence, and dynamic 
-    model configuration options. It implements intelligent conversation history management 
-    with automatic truncation to optimize token usage while preserving context.
+      fullDescription: `A comprehensive wrapper application that provides an intuitive interface 
+      to OpenAI's GPT models while managing API costs and conversation history efficiently. 
+      The tool features a GUI for easy interaction, conversation persistence, and dynamic 
+      model configuration options. It implements intelligent conversation history management 
+      with automatic truncation to optimize token usage while preserving context.`,
     
-    Key innovations include:
-    - Smart conversation history management with automatic truncation
-    - Configurable model parameters through an intuitive GUI
-    - Persistent conversation storage and retrieval
-    - Token usage optimization while maintaining context quality
-    - Dynamic model switching and parameter adjustment`,
-
     categories: ['AI Tools', 'Natural Language Processing', 'Developer Tools'],
     technologies: ['Python', 'OpenAI API', 'tkinter', 'JSON'],
     images: {
@@ -33,18 +26,17 @@ export const projects: Project[] = [
       ],
     },
     links: {
-      github: 'https://github.com/yourusername/gpt-api-wrapper',
+      github: 'https://github.com/samahesh56/gptApp',
     },
     dates: {
-      started: '2023-09-01',
-      completed: '2024-01-15',
+      started: 'Dec 2023',
+      completed: 'Dec 2024',
     },
     featured: true,
     metrics: {
-      impact: 'Reduced API costs by 40% while maintaining response quality',
+      impact: 'Reduced API costs while maintaining response quality',
       results: [
         'Optimized token usage through intelligent conversation truncation',
-        'Simplified GPT integration for developers',
         'Enhanced prompt engineering capabilities through GUI',
         'Flexible conversation management system',
       ],
@@ -53,69 +45,67 @@ export const projects: Project[] = [
 
   {
     id: '2',
-    slug: 'ai-education-platform',
-    title: 'AI Education Platform',
-    shortDescription:
-      'Personalizing learning experiences through adaptive AI technology',
-    fullDescription: `A comprehensive education platform that leverages AI to create 
-    personalized learning paths for students. The system adapts to individual learning 
-    styles and pace, providing targeted recommendations and feedback.`,
-    categories: ['Education', 'AI'],
-    technologies: ['Python', 'TensorFlow', 'React'],
+    slug: 'agilesteps-team-analysis',
+    title: 'Building Better Agile Teams',
+    shortDescription: 'Investigating the impact of personality traits and team reflexivity on agile software development team performance',
+    fullDescription: `Research study examining how Big Five personality traits and team reflexivity influence agile team performance. Initial findings show team reflexivity explains 16.3% of performance variance, with personality traits increasing explained variance to 27.7%. Results suggest balanced team composition may be optimal, as high levels of certain traits like Conscientiousness and Openness could reduce reflexivity's positive effects.`,
+    categories: ['Research', 'Agile Development', 'Team Psychology', 'Data Analysis'],
+    technologies: ['SPSS', 'Statistical Analysis', 'Survey Tools'],
     images: {
-      thumbnail: '/projects/default-thumb.jpg', // Using default image for now
+      thumbnail: '/projects/default-thumb.jpg',
       featured: '/projects/default-thumb.jpg',
-      gallery: ['/projects/default-thumb.jpg'],
+      gallery: ['/projects/default-thumb.jpg']
     },
     links: {
-      github: 'https://github.com/yourusername/ai-education',
-      demo: 'https://demo.example.com',
+      website: 'https://sites.psu.edu/mcreu/2024/07/22/building-better-agile-teams-by-investigating-the-influential-roles-of-personality-traits-and-team-reflexivity-on-performance-2/'
     },
     dates: {
-      started: '2023-01-01',
-      completed: '2023-06-30',
+      started: 'May 2024',
+      completed: 'Present'
     },
     featured: true,
     metrics: {
-      impact: 'Reached 1000+ students',
+      impact: 'Analyzing optimal team composition strategies in agile environments',
       results: [
-        '25% improvement in learning outcomes',
-        'Reduced study time by 30%',
-      ],
+        'Created detailed research documentation and analysis procedures',
+        'Implemented secure data collection and encryption protocols',
+        'Found balanced personality composition may enhance team performance'      
+    ]
     },
   },
 
   {
     id: '3',
-    slug: 'ai-education-platform',
-    title: 'AI Education Platform',
-    shortDescription:
-      'Personalizing learning experiences through adaptive AI technology',
-    fullDescription: `A comprehensive education platform that leverages AI to create 
-    personalized learning paths for students. The system adapts to individual learning 
-    styles and pace, providing targeted recommendations and feedback.`,
-    categories: ['Education', 'AI'],
-    technologies: ['Python', 'TensorFlow', 'React'],
+    slug: 'portfolio-website',
+    title: 'Personal Portfolio Website',
+    shortDescription: 'A modern, responsive portfolio website built with Next.js and Tailwind CSS',
+    fullDescription: `A dynamic portfolio website showcasing my projects and professional experience. Built using Next.js 14 with App Router for optimal performance and SEO, styled with Tailwind CSS for responsive design, and featuring smooth animations with Framer Motion.`,
+    categories: ['Web Development', 'Frontend', 'Personal Project'],
+    technologies: ['Next.js', 'TypeScript', 'Tailwind CSS'],
     images: {
-      thumbnail: '/projects/default-thumb.jpg', // Using default image for now
-      featured: '/projects/default-thumb.jpg',
-      gallery: ['/projects/default-thumb.jpg'],
+      thumbnail: '/projects/portfolio/thumbnail.jpg',
+      featured: '/projects/portfolio/featured.jpg',
+      gallery: [
+        '/projects/portfolio/home.jpg',
+        '/projects/portfolio/projects.jpg',
+        '/projects/portfolio/contact.jpg'
+      ]
     },
     links: {
-      github: 'https://github.com/yourusername/ai-education',
-      demo: 'https://demo.example.com',
-    },
+      github: 'https://github.com/samahesh56/Website'    
+      },
     dates: {
-      started: '2023-01-01',
-      completed: '2023-06-30',
+      started: 'January 2024',
+      completed: 'Present'
     },
     featured: true,
     metrics: {
-      impact: 'Reached 1000+ students',
+      impact: 'Professional showcase and project portfolio',
       results: [
-        '25% improvement in learning outcomes',
-        'Reduced study time by 30%',
-      ],
+        'Implemented responsive design with modern UI/UX principles',
+        'Optimized performance with Next.js App Router and static generation',
+        'Created dynamic project showcase with detailed case studies'
+      ]
     },
   },
 ];

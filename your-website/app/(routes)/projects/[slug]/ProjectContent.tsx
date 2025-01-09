@@ -90,7 +90,8 @@ export default function ProjectContent({ project }: { project: Project }) {
             {/* Project Links - Only show if any links exist */}
             {(project.links.github ||
               project.links.demo ||
-              project.links.documentation) && (
+              project.links.documentation ||
+              project.links.website) && (
               <div className="bg-slate-800 p-6 rounded-xl">
                 <h3 className="text-xl font-semibold text-white mb-4">
                   Project Links
@@ -121,6 +122,15 @@ export default function ProjectContent({ project }: { project: Project }) {
                       target="_blank"
                     >
                       <span>Documentation</span>
+                    </Link>
+                  )}
+                  {project.links.website && (
+                    <Link
+                      href={project.links.website}
+                      className="flex items-center gap-2 text-blue-400 hover:text-blue-300"
+                      target="_blank"
+                    >
+                      <span>Website</span>
                     </Link>
                   )}
                 </div>
@@ -157,7 +167,10 @@ export default function ProjectContent({ project }: { project: Project }) {
                 {project.dates.completed && (
                   <p className="text-gray-300">
                     Completed:{' '}
-                    {new Date(project.dates.completed).toLocaleDateString()}
+                    {project.dates.completed === 'Present' 
+                      ? 'Present'
+                      : new Date(project.dates.completed).toLocaleDateString()
+                    }
                   </p>
                 )}
               </div>

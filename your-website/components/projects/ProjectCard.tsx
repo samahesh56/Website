@@ -81,6 +81,17 @@ export function ProjectCard({ project }: ProjectCardProps) {
               Live Demo
             </a>
           )}
+          {project.links.website && (
+            <a 
+              href={project.links.website}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-blue-300 hover:text-blue-400"
+              onClick={(e) => e.stopPropagation()}
+            >
+              Website
+            </a>
+          )}
         </div>
       </div>
     </article>

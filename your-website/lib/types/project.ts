@@ -16,6 +16,7 @@ export interface Project {
       github?: string;
       demo?: string;
       documentation?: string;
+      website?: string;
     };
     dates: {
       started: string;

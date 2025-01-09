@@ -3,7 +3,7 @@ title: "Complete Markdown Guide"
 date: "2024-12-31"
 summary: "A comprehensive guide to Markdown formatting with examples"
 author:
-  name: "Your Name"
+  name: "Sankeerth Mahesh"
 categories: ["Tutorial", "Documentation"]
 ---
 

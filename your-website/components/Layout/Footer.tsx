@@ -14,7 +14,7 @@ const Footer = () => {
               Sankeerth Mahesh
             </h3>
             <p className="text-gray-400 text-sm">
-              AI Researcher focused on enhancing human potential through responsible AI development.
+              Computer scientist focused on enhancing human potential through responsible AI development.
             </p>
           </div>
 
@@ -40,8 +40,8 @@ const Footer = () => {
             <h4 className="text-gray-200 font-semibold">Connect</h4>
             <SocialLinks />
             <p className="text-gray-400 text-sm">
-              Get in touch: <a href="mailto:your.email@example.com" className="text-blue-400 hover:text-blue-300">
-                your.email@example.com
+              Get in touch: <a href="mailto:spm6755@psu.edu" className="text-blue-400 hover:text-blue-300">
+                spm6755@psu.edu
               </a>
             </p>
           </div>

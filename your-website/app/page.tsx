@@ -24,7 +24,7 @@ export default function Home() {
               <div className="space-y-6 md:space-y-8 max-w-xl mx-auto lg:mx-0">
                 <div className="inline-block px-4 py-2 bg-blue-500/10 rounded-full border border-blue-300/20">
                   <span className="text-blue-300 text-sm font-medium">
-                    AI Researcher & Computer Scientist
+                    Computer Scientist & AI Researcher
                   </span>
                 </div>
 
@@ -34,8 +34,8 @@ export default function Home() {
                 </h1>
 
                 <p className="text-lg md:text-xl text-gray-300">
-                  Developing intelligent systems that enhance human potential
-                  and democratize access to education.
+                  Learning to develop intelligent solutions that make technology
+                  more practical and impactful in everyday life.
                 </p>
 
                 <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
@@ -80,33 +80,32 @@ export default function Home() {
             <div className="grid md:grid-cols-2 gap-8 lg:gap-12">
               {/* Featured Work Column */}
               <motion.div
-                className="bg-slate-800 p-6 lg:p-8 rounded-xl"
+                className="space-y-8"
                 initial={{ opacity: 0, x: -50 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.8, ease: 'easeOut' }}
                 viewport={{ once: true }}
               >
-                <h3 className="text-xl font-semibold text-blue-300 mb-6">
+                <h3 className="text-xl font-semibold text-blue-300">
                   Research Focus
                 </h3>
-
+                
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: 0.2, ease: 'easeOut' }}
                   viewport={{ once: true }}
-                  className="bg-slate-800 p-6 rounded-xl border border-blue-500/20 hover:border-blue-500/40 transition group hover:scale-[1.02] duration-300"
+                  className="bg-slate-900/50 p-6 rounded-xl border border-blue-500/20 hover:border-blue-500/40 transition group hover:scale-[1.02] duration-300"
                 >
                   <h4 className="text-lg font-semibold mb-2">
-                    AI Education Systems
+                    Agile Team Research
                   </h4>
                   <p className="text-gray-300 mb-4">
-                    Developing adaptive learning platforms that personalize
-                    education using AI
+                    Investigating how personality traits and team dynamics influence software development performance
                   </p>
                   <div className="flex items-center text-blue-300 text-sm">
                     <span className="mr-2">🔍</span>
-                    <span>Active Research Project</span>
+                    <span>Current Research Project</span>
                   </div>
                 </motion.div>
 
@@ -115,16 +114,15 @@ export default function Home() {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: 0.4, ease: 'easeOut' }}
                   viewport={{ once: true }}
-                  className="bg-slate-800 p-6 rounded-xl border border-blue-500/20 hover:border-blue-500/40 transition group hover:scale-[1.02] duration-300"
+                  className="bg-slate-900/50 p-6 rounded-xl border border-blue-500/20 hover:border-blue-500/40 transition group hover:scale-[1.02] duration-300"
                 >
-                  <h4 className="text-lg font-semibold mb-2">Ethics in AI</h4>
+                  <h4 className="text-lg font-semibold mb-2">Machine Learning Fundamentals</h4>
                   <p className="text-gray-300 mb-4">
-                    Exploring frameworks for responsible AI development and
-                    deployment
+                    Learning ML basics through Penn State ML Club and practical applications
                   </p>
                   <div className="flex items-center text-blue-300 text-sm">
                     <span className="mr-2">📚</span>
-                    <span>Ongoing Study</span>
+                    <span>Ongoing Learning</span>
                   </div>
                 </motion.div>
               </motion.div>
@@ -143,19 +141,19 @@ export default function Home() {
 
                 {[
                   {
-                    icon: '📝',
-                    text: 'Published new findings on AI education impact',
-                    time: '2 weeks ago',
+                    icon: '🔬',
+                    text: 'Conducting statistical analysis on agile team performance data',
+                    time: 'Current',
                   },
                   {
-                    icon: '💡',
-                    text: 'Released open-source AI learning tools',
-                    time: '1 month ago',
+                    icon: '💻',
+                    text: 'Developed GPT API Wrapper Application',
+                    time: 'December 2023',
                   },
                   {
-                    icon: '🎓',
-                    text: 'Started new research collaboration',
-                    time: '1 month ago',
+                    icon: '🌐',
+                    text: 'Building personal portfolio website with Next.js',
+                    time: 'January 2024',
                   },
                 ].map((update, index) => (
                   <motion.div
@@ -168,7 +166,7 @@ export default function Home() {
                       ease: 'easeOut',
                     }}
                     viewport={{ once: true }}
-                    className="bg-slate-800 p-6 lg:p-8 rounded-xl border border-blue-500/20 hover:border-blue-500/40 transition-all duration-300 hover:scale-[1.02]"
+                    className="bg-slate-900/50 p-6 lg:p-8 rounded-xl space-y-6 border border-blue-500/20 hover:border-blue-500/40 transition-all duration-300 hover:scale-[1.02]"
                   >
                     <div className="flex items-center space-x-4 mb-4">
                       <span className="text-2xl">{update.icon}</span>

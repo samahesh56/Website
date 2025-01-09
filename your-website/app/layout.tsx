@@ -7,7 +7,7 @@ import PageTransition from '@/components/Animation/PageTransition';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'Your Name | AI Researcher',
+  title: 'SankeerthLabs',
   description: 'AI Scientist focusing on social impact and human potential',
 };
 

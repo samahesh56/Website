@@ -38,7 +38,7 @@ export default function AboutPage() {
             {...fadeIn}
             className="lg:col-span-8"
             >
-            <h1 className="text-4xl font-bold mb-8 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+            <h1 className="text-4xl font-bold mb-2 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
                 About Me
             </h1>
             
@@ -46,17 +46,15 @@ export default function AboutPage() {
                 {/* Introduction */}
                 <div className="space-y-4">
                 <p className="text-xl text-gray-300">
-                    I'm an AI Researcher focused on developing artificial intelligence 
-                    solutions that create positive social impact. With a background in 
-                    computer science and a deep interest in AI ethics, I work at the 
-                    intersection of machine learning and social good.
+                I'm a computer scientist learning to work at the intersection of machine learning and
+                 social good, with a foundation in computer science and growing understanding of AI ethics.
                 </p>
 
                 <p className="text-gray-400">
-                    My research focuses on making AI systems more accessible, ethical, and 
-                    beneficial to society. I'm particularly interested in developing AI 
-                    solutions that enhance educational opportunities and improve access to 
-                    technology in underserved communities.
+                I'm actively exploring how AI can be used ethically and responsibly to benefit society, 
+                 particularly through my ongoing research and learning. While I'm still building my foundations
+                 in machine learning, my goal is to develop expertise that will enable me to create AI 
+                 solutions that expand the capabilities of technology to solve real-world problems.
                 </p>
                 </div>
 
@@ -104,7 +102,7 @@ export default function AboutPage() {
               </div>
               <div>
                 <dt className="text-gray-400 text-sm">Technologies</dt>
-                <dd className="font-medium text-gray-200">Python, PyTorch, TensorFlow</dd>
+                <dd className="font-medium text-gray-200">Python, SPSS, PyTorch (Learning) </dd>
               </div>
             </dl>
           </div>
