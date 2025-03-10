@@ -1,4 +1,5 @@
 import type { Config } from 'tailwindcss';
+import typographyPlugin from '@tailwindcss/typography';
 
 const config: Config = {
   content: [
@@ -49,9 +50,49 @@ const config: Config = {
           '100%': { transform: 'translateY(0)', opacity: '1' },
         },
       },
+      typography: {
+        DEFAULT: {
+          css: {
+            color: '#d1d5db', // gray-300
+            h1: {
+              color: '#ffffff',
+            },
+            h2: {
+              color: '#ffffff',
+            },
+            h3: {
+              color: '#ffffff',
+            },
+            h4: {
+              color: '#ffffff',
+            },
+            strong: {
+              color: '#ffffff',
+            },
+            code: {
+              color: '#d1d5db',
+              backgroundColor: '#1f2937',
+              padding: '0.25rem',
+              borderRadius: '0.25rem',
+            },
+            blockquote: {
+              color: '#9ca3af', // gray-400
+              borderLeftColor: '#3b82f6', // blue-500
+            },
+            a: {
+              color: '#60a5fa', // blue-400
+              '&:hover': {
+                color: '#93c5fd', // blue-300
+              },
+            },
+          },
+        },
+      },
     },
   },
-  plugins: [],
+  plugins: [
+    typographyPlugin,
+  ],
 };
 
 export default config;

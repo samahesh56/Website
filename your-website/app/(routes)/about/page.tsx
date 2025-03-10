@@ -22,14 +22,14 @@ export default function AboutPage() {
           className="lg:col-span-4"
         >
           <div className="aspect-square relative rounded-xl overflow-hidden shadow-2xl ring-1 ring-blue-500/20">
-            <Image
-              src="/images/profile.jpg"
-              alt="Sankeerth Mahesh"
-              fill
-              className="object-cover"
-              sizes="(max-width: 768px) 100vw, 33vw"
-              priority
-            />
+          <Image
+            src="/images/profile.jpg"
+            alt="Sankeerth Mahesh"
+            fill
+            className="object-cover"
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            priority={true}
+          />
           </div>
         </motion.div>
 
@@ -111,7 +111,7 @@ export default function AboutPage() {
         {/* Education */}
         <motion.div 
             {...fadeIn}
-            className="lg:col-span-8 -mt-[3.625rem]"
+            className="lg:col-span-8 lg:-mt-[3.625rem]"
             >
             <div className="bg-slate-900/50 backdrop-blur-sm rounded-xl p-6 shadow-xl ring-1 ring-blue-500/20">
                 <h2 className="text-xl font-semibold mb-4 text-white">Education</h2>

@@ -1,0 +1,182 @@
+{
+  "main": {
+    "id": "716a30fb30f463fe",
+    "type": "split",
+    "children": [
+      {
+        "id": "9e855de5a1888436",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "0604d280a5bf798e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "website-completion-guide.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "website-completion-guide"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "cf2fd7e494dfc518",
+    "type": "split",
+    "children": [
+      {
+        "id": "2baa49a3b101d367",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "7f8427e99a45496c",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "f1077e67ce62adc1",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "b6d98ba9a05ac1f1",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "1013ee5d827f67bb",
+    "type": "split",
+    "children": [
+      {
+        "id": "ebd5077af216cb05",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "a1d76538dc0dcf33",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "website-completion-guide.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for website-completion-guide"
+            }
+          },
+          {
+            "id": "71f142b6c145ef4d",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "website-completion-guide.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from website-completion-guide"
+            }
+          },
+          {
+            "id": "c5dcb377e9e31827",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "4e18d0efbd76cf71",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "website-completion-guide.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of website-completion-guide"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
+    }
+  },
+  "active": "0604d280a5bf798e",
+  "lastOpenFiles": [
+    "your-website/app/(routes)/about/loading.tsx",
+    "your-website/app/(routes)/contact/loading.tsx",
+    "your-website/app/(routes)/projects/[slug]/loading.tsx",
+    "your-website/app/(routes)/projects/loading.tsx",
+    "your-website/app/(routes)/blog/loading.tsx",
+    "your-website/content/blog/building-my-portfolio-website.md",
+    "your-website/components/shared/ErrorBoundary.tsx",
+    "website-completion-guide.md"
+  ]
+}

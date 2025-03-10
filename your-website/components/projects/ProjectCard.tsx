@@ -15,13 +15,14 @@ export function ProjectCard({ project }: ProjectCardProps) {
       <Link href={`/projects/${project.slug}`}>
         <div className="cursor-pointer">
           <div className="relative aspect-[16/9]">
-            <Image
-              src={project.images.thumbnail}
-              alt={project.title}
-              fill
-              className="object-cover"
-              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-            />
+          <Image
+            src={project.images.thumbnail}
+            alt={project.title}
+            fill
+            className="object-cover"
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            loading="lazy"
+          />
           </div>
           <div className="p-6 pb-2">
             <h3 className="text-xl font-semibold text-white mb-2">{project.title}</h3>
