@@ -27,7 +27,7 @@ export default function WorkToContactTransition() {
           className="space-y-6"
         >
           <h2 className="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-400">
-            Let's Connect
+            Let&apos;s Connect
           </h2>
           <p className="text-gray-400 text-lg mb-16">
             Interested in collaboration, AI research, or just want to chat about the future of technology? 

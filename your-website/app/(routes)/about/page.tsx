@@ -46,13 +46,13 @@ export default function AboutPage() {
                 {/* Introduction */}
                 <div className="space-y-4">
                 <p className="text-xl text-gray-300">
-                I'm a computer scientist learning to work at the intersection of machine learning and
+                I&apos;m a computer scientist learning to work at the intersection of machine learning and
                  social good, with a foundation in computer science and growing understanding of AI ethics.
                 </p>
 
                 <p className="text-gray-400">
-                I'm actively exploring how AI can be used ethically and responsibly to benefit society, 
-                 particularly through my ongoing research and learning. While I'm still building my foundations
+                I&apos;m actively exploring how AI can be used ethically and responsibly to benefit society, 
+                 particularly through my ongoing research and learning. While I&apos;m still building my foundations
                  in machine learning, my goal is to develop expertise that will enable me to create AI 
                  solutions that expand the capabilities of technology to solve real-world problems.
                 </p>
@@ -135,8 +135,8 @@ export default function AboutPage() {
                     <p className="text-gray-400">Computer Organization and Design</p>
                     </div>
                     <div>
-                    <p className="text-blue-400 font-medium">CMPSC 497</p>
-                    <p className="text-gray-400">AI, Humans, and Society</p>
+                    <p className="text-blue-400 font-medium">CMPSC 360</p>
+                    <p className="text-gray-400">Discrete Mathematics for CS</p>
                     </div>
                     <div>
                     <p className="text-blue-400 font-medium">CMPSC 461</p>
