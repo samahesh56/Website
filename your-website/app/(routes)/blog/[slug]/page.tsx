@@ -1,11 +1,10 @@
-// app/blog/[slug]/page.tsx
+// app/(routes)/blog/[slug]/page.tsx
 import { MDXRemote } from 'next-mdx-remote/rsc';
 import { getPostBySlug } from '@/lib/utils/blog';
 import { PostHeader } from '@/components/blog/PostHeader';
 import { notFound } from 'next/navigation';
 import { MDXComponentProps } from '@/lib/types/mdx';
 import OptimizedImage from '@/components/ui/OptimizedImage';
-import { use } from 'react';
 
 // Enhanced MDX components with styling
 const components = {
@@ -102,14 +101,22 @@ const components = {
   ),
 };
 
-export default function PostPage({ params }: { params: { slug: string } }) {
-  const resolvedParams = use(Promise.resolve(params));
-  const slug = resolvedParams.slug;
+// This type should match what Next.js 15 is expecting for dynamic routes
+type Props = {
+  params: {
+    slug: string;
+  };
+};
+
+export default async function PostPage({ params }: Props) {
+  // No need to resolve params or use the 'use' hook - it's now a normal async function
+  const { slug } = params;
   
-  const postData = use(getPostBySlug(slug));
+  const postData = await getPostBySlug(slug);
   
   if (!postData) {
-    return notFound();
+    notFound();
+    return null; // This line won't execute but helps TypeScript understand the flow
   }
 
   const { post, content } = postData;

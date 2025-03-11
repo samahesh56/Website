@@ -35,7 +35,8 @@ export async function getPostBySlug(slug: string): Promise<PostWithContent | nul
       } as Post,
       content: source,
     };
-  } catch {
+  } catch (error) {
+    console.error(`Error getting post by slug ${slug}:`, error);
     return null;
   }
 }
