@@ -135,8 +135,8 @@ export default function AboutPage() {
                     <p className="text-gray-400">Computer Organization and Design</p>
                     </div>
                     <div>
-                    <p className="text-blue-400 font-medium">CMPSC 360</p>
-                    <p className="text-gray-400">Discrete Mathematics for CS</p>
+                    <p className="text-blue-400 font-medium">CMPSC 497</p>
+                    <p className="text-gray-400">AI, Humans, and Society</p>
                     </div>
                     <div>
                     <p className="text-blue-400 font-medium">CMPSC 461</p>

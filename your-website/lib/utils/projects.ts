@@ -51,7 +51,9 @@ export const projects: Project[] = [
     images: {
       thumbnail: '/projects/agilesteps/agilemodel.png',
       featured: '/projects/default-thumb.jpg',
-      gallery: ['/projects/default-thumb.jpg']
+      gallery: [
+
+      ]
     },
     links: {
       website: 'https://sites.psu.edu/mcreu/2024/07/22/building-better-agile-teams-by-investigating-the-influential-roles-of-personality-traits-and-team-reflexivity-on-performance-2/'
@@ -74,34 +76,32 @@ export const projects: Project[] = [
   {
     id: '3',
     slug: 'portfolio-website',
-    title: 'Personal Portfolio Website',
-    shortDescription: 'A modern, responsive portfolio website built with Next.js and Tailwind CSS',
-    fullDescription: `A dynamic portfolio website showcasing my projects and professional experience. Built using Next.js 14 with App Router for optimal performance and SEO, styled with Tailwind CSS for responsive design, and featuring smooth animations with Framer Motion.`,
-    categories: ['Web Development', 'Frontend', 'Personal Project'],
-    technologies: ['Next.js', 'TypeScript', 'Tailwind CSS'],
+    title: 'AI-Assisted Portfolio Website',
+    shortDescription: 'A modern, responsive portfolio website built through effective AI collaboration using Next.js and Tailwind CSS',
+    fullDescription: `A dynamic portfolio website showcasing my projects and professional experience, developed through an innovative collaboration with Claude 3.7 Sonnet. I directed the development process through carefully crafted prompts, making key design decisions while leveraging AI capabilities for implementation. The site is built using Next.js 14 with App Router for optimal performance and SEO, styled with Tailwind CSS for responsive design, and features smooth animations with Framer Motion. This project demonstrates both my technical direction and prompt engineering skills in a practical application of human-AI collaboration.`,
+    categories: ['Web Development', 'Frontend', 'Personal Project', 'AI Collaboration'],
+    technologies: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Prompt Engineering'],
     images: {
-      thumbnail: '/projects/portfolio/thumbnail.jpg',
+      thumbnail: '/projects/portfolio/thumbnail.png',
       featured: '/projects/portfolio/featured.jpg',
       gallery: [
-        '/projects/portfolio/home.jpg',
-        '/projects/portfolio/projects.jpg',
-        '/projects/portfolio/contact.jpg'
       ]
     },
     links: {
       github: 'https://github.com/samahesh56/Website'    
-      },
+    },
     dates: {
       started: 'January 2024',
       completed: 'Present'
     },
     featured: true,
     metrics: {
-      impact: 'Professional showcase and project portfolio',
+      impact: 'Professional showcase and practical demonstration of AI-human collaboration',
       results: [
-        'Implemented responsive design with modern UI/UX principles',
-        'Optimized performance with Next.js App Router and static generation',
-        'Created dynamic project showcase with detailed case studies'
+        'Implemented responsive design through directed AI collaboration',
+        'Learned modern web development patterns through hands-on project guidance',
+        'Developed effective prompt engineering techniques for technical implementation',
+        'Created an optimized Next.js application with proper SEO and performance considerations'
       ]
     },
   },

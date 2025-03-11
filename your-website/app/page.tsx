@@ -32,7 +32,7 @@ export default function Home() {
               <div className="space-y-6 md:space-y-8 max-w-xl mx-auto lg:mx-0">
                 <div className="inline-block px-4 py-2 bg-blue-500/10 rounded-full border border-blue-300/20">
                   <span className="text-blue-300 text-sm font-medium">
-                    Computer Scientist & AI Researcher
+                    Sankeerth Mahesh | Computer Scientist & AI Researcher
                   </span>
                 </div>
 

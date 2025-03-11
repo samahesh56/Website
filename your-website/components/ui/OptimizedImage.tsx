@@ -42,7 +42,7 @@ export default function OptimizedImage({
           transition-all duration-500
           ${fill ? 'object-cover' : ''}
         `}
-        onLoadingComplete={() => setIsLoading(false)}
+        onLoad={() => setIsLoading(false)}
       />
     </div>
   );

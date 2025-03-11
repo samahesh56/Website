@@ -170,6 +170,10 @@
   },
   "active": "0604d280a5bf798e",
   "lastOpenFiles": [
+    "your-website/components/blog/BlogClientWrapper.tsx",
+    "your-website/components/Layout/ClientLayoutWrapper.tsx",
+    "your-website/public/projects/portfolio/thumbnail.png",
+    "your-website/public/projects/portfolio",
     "your-website/app/robots.ts",
     "your-website/app/sitemap.ts",
     "your-website/components/ui/OptimizedImage.tsx",
@@ -180,9 +184,6 @@
     "your-website/public/projects/gpt-wrapper",
     "your-website/public/images/projects/test",
     "your-website/public/images/projects/gpt-wrapper/new",
-    "your-website/public/images/projects/gpt-wrapper",
-    "your-website/public/images/projects",
-    "your-website/public/images",
     "your-website/content/blog/building-my-portfolio-website.md",
     "website-completion-guide.md"
   ]
