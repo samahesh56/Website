@@ -101,12 +101,13 @@ const components = {
   ),
 };
 
-// Fixed function signature to properly handle params
-export default async function PostPage(props: {
+// Fixed function signature to properly handle params as an async context
+export default async function PostPage({
+  params,
+}: {
   params: { slug: string }
 }) {
-  // Correctly access the slug from props.params
-  const { slug } = props.params;
+  const slug = params.slug;
   
   const postData = await getPostBySlug(slug);
   
