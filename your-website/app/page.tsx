@@ -2,18 +2,43 @@
 'use client';
 import { MainLayout } from '@/components/Layout/MainLayout';
 import Link from 'next/link';
-import TransitionSection from '@/components/Transitions/TransitionSection';
-import WorkToContactTransition from '@/components/Transitions/WorkToContactTransition';
+import { Suspense, lazy } from 'react';
 import { motion } from 'framer-motion';
-import dynamic from 'next/dynamic';
 
-// Lazy load the network animation component
-const NetworkAnimation = dynamic(() => import('@/components/NetworkAnimation'), {
-  ssr: false, // Don't render on server
-  loading: () => (
-    <div className="w-full h-screen bg-slate-800/30 animate-pulse rounded-lg"></div>
-  ),
-});
+// Lazy load heavy components with delays to prioritize critical content
+const NetworkAnimation = lazy(() => 
+  import('@/components/NetworkAnimation').then(mod => {
+    // Add a small delay to prioritize critical content rendering
+    return new Promise<typeof mod>(resolve => {
+      setTimeout(() => resolve(mod), 300);
+    });
+  })
+);
+
+const TransitionSection = lazy(() => 
+  import('@/components/Transitions/TransitionSection').then(mod => {
+    return new Promise<typeof mod>(resolve => {
+      setTimeout(() => resolve(mod), 100);
+    });
+  })
+);
+
+const WorkToContactTransition = lazy(() => 
+  import('@/components/Transitions/WorkToContactTransition').then(mod => {
+    return new Promise<typeof mod>(resolve => {
+      setTimeout(() => resolve(mod), 200);
+    });
+  })
+);
+
+// Loading fallbacks
+const NetworkAnimationFallback = () => (
+  <div className="w-full h-screen bg-slate-800/30 animate-pulse rounded-lg"></div>
+);
+
+const TransitionSectionFallback = () => (
+  <div className="w-full py-32 bg-gradient-to-b from-slate-800 to-slate-900"></div>
+);
 
 export default function Home() {
   return (
@@ -62,15 +87,19 @@ export default function Home() {
                 </div>
               </div>
 
-              {/* Right Visual */}
+              {/* Right Visual - Lazy loaded */}
               <div className="hidden lg:block w-full h-screen relative">
-                <NetworkAnimation />
+                <Suspense fallback={<NetworkAnimationFallback />}>
+                  <NetworkAnimation />
+                </Suspense>
               </div>
             </div>
           </div>
         </section>
 
-        <TransitionSection />
+        <Suspense fallback={<TransitionSectionFallback />}>
+          <TransitionSection />
+        </Suspense>
 
         {/* Work & Updates Section */}
         <section className="py-20 lg:py-32 bg-gradient-to-b from-slate-800 to-slate-900 text-white">
@@ -188,7 +217,9 @@ export default function Home() {
           </motion.div>
         </section>
 
-        <WorkToContactTransition />
+        <Suspense fallback={<TransitionSectionFallback />}>
+          <WorkToContactTransition />
+        </Suspense>
       </div>
     </MainLayout>
   );
