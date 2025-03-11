@@ -5,6 +5,7 @@ import { PostHeader } from '@/components/blog/PostHeader';
 import { notFound } from 'next/navigation';
 import { MDXComponentProps } from '@/lib/types/mdx';
 import OptimizedImage from '@/components/ui/OptimizedImage';
+import { use } from 'react';
 
 // Enhanced MDX components with styling
 const components = {
@@ -101,18 +102,14 @@ const components = {
   ),
 };
 
-// Fixed param handling for NextJS 15+ compatibility
-interface PageProps {
-  params: { slug: string };
-}
-
-export default async function PostPage({ params }: PageProps) {
-  const slug = params.slug;
+export default function PostPage({ params }: { params: { slug: string } }) {
+  const resolvedParams = use(Promise.resolve(params));
+  const slug = resolvedParams.slug;
   
-  const postData = await getPostBySlug(slug);
+  const postData = use(getPostBySlug(slug));
   
   if (!postData) {
-    notFound();
+    return notFound();
   }
 
   const { post, content } = postData;
