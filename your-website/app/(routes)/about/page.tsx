@@ -1,6 +1,6 @@
 // app/about/page.tsx
 'use client';
-import Image from 'next/image';
+import OptimizedImage from '@/components/ui/OptimizedImage'; // Import OptimizedImage instead of Image
 import { motion } from 'framer-motion';
 import { MainLayout } from '@/components/Layout/MainLayout';
 // import { SocialLinks } from '@/components/shared/SocialLinks';
@@ -22,8 +22,8 @@ export default function AboutPage() {
           className="lg:col-span-4"
         >
           <div className="aspect-square relative rounded-xl overflow-hidden shadow-2xl ring-1 ring-blue-500/20">
-          <Image
-            src="/images/profile.jpg"
+          <OptimizedImage
+            src="https://placehold.co/600x600/3b82f6/ffffff?text=SM"
             alt="Sankeerth Mahesh"
             fill
             className="object-cover"

@@ -1,6 +1,6 @@
 // components/projects/ProjectCard.tsx
 "use client";
-import Image from 'next/image';
+import OptimizedImage from '@/components/ui/OptimizedImage'; // Import OptimizedImage instead of Image
 import Link from 'next/link';
 import { Project } from '@/lib/types/project';
 
@@ -15,14 +15,13 @@ export function ProjectCard({ project }: ProjectCardProps) {
       <Link href={`/projects/${project.slug}`}>
         <div className="cursor-pointer">
           <div className="relative aspect-[16/9]">
-          <Image
-            src={project.images.thumbnail}
-            alt={project.title}
-            fill
-            className="object-cover"
-            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-            loading="lazy"
-          />
+          <OptimizedImage 
+              src={project.images.thumbnail}
+              alt={`${project.title} project thumbnail`}
+              fill
+              className="object-cover"
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            />
           </div>
           <div className="p-6 pb-2">
             <h3 className="text-xl font-semibold text-white mb-2">{project.title}</h3>

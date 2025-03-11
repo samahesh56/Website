@@ -4,7 +4,7 @@ import { getPostBySlug } from '@/lib/utils/blog';
 import { PostHeader } from '@/components/blog/PostHeader';
 import { notFound } from 'next/navigation';
 import { MDXComponentProps } from '@/lib/types/mdx';
-import Image from 'next/image';
+import OptimizedImage from '@/components/ui/OptimizedImage';
 
 // Enhanced MDX components with styling
 const components = {
@@ -85,13 +85,13 @@ const components = {
   img: ({ src, alt, ...props }: MDXComponentProps & { src?: string, alt?: string }) => (
     <div className="my-6 relative">
       {src && (
-        <Image 
+        <OptimizedImage 
           src={src} 
-          alt={alt || ''} 
+          alt={alt || 'Blog post image'} 
           width={800} 
           height={450} 
           className="rounded-lg" 
-          {...props} 
+          {...props} // Forward all remaining props
         />
       )}
     </div>

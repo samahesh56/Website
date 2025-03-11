@@ -7,8 +7,36 @@ import PageTransition from '@/components/Animation/PageTransition';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'SankeerthLabs',
-  description: 'AI Scientist focusing on social impact and human potential',
+  metadataBase: new URL(process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000'),
+  title: {
+    default: 'Sankeerth Mahesh | AI Researcher',
+    template: '%s | Sankeerth Mahesh'
+  },
+  description: 'AI Researcher focusing on social impact and human potential through ethical AI development',
+  keywords: ['AI research', 'machine learning', 'social impact', 'ethics', 'portfolio', 'computer science'],
+  authors: [{ name: 'Sankeerth Mahesh' }],
+  creator: 'Sankeerth Mahesh',
+  openGraph: {
+    type: 'website',
+    locale: 'en_US',
+    title: 'Sankeerth Mahesh | AI Researcher',
+    description: 'AI Researcher focusing on social impact and human potential',
+    siteName: 'Sankeerth Mahesh Portfolio',
+    images: [
+      {
+        url: '/images/og-image.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Sankeerth Mahesh | AI Researcher'
+      }
+    ]
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Sankeerth Mahesh | AI Researcher',
+    description: 'AI Researcher focusing on social impact and human potential',
+    images: ['/images/og-image.jpg']
+  }
 };
 
 export default function RootLayout({

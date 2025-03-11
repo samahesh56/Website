@@ -3,9 +3,17 @@
 import { MainLayout } from '@/components/Layout/MainLayout';
 import Link from 'next/link';
 import TransitionSection from '@/components/Transitions/TransitionSection';
-import NetworkAnimation from '@/components/NetworkAnimation';
 import WorkToContactTransition from '@/components/Transitions/WorkToContactTransition';
 import { motion } from 'framer-motion';
+import dynamic from 'next/dynamic';
+
+// Lazy load the network animation component
+const NetworkAnimation = dynamic(() => import('@/components/NetworkAnimation'), {
+  ssr: false, // Don't render on server
+  loading: () => (
+    <div className="w-full h-screen bg-slate-800/30 animate-pulse rounded-lg"></div>
+  ),
+});
 
 export default function Home() {
   return (
