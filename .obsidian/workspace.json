@@ -170,13 +170,19 @@
   },
   "active": "0604d280a5bf798e",
   "lastOpenFiles": [
+    "your-website/public/projects/agilesteps/agilemodel.png",
+    "your-website/public/projects/agilesteps",
+    "your-website/public/projects/gpt-wrapper/featured.png",
+    "your-website/public/projects/gpt-wrapper",
+    "your-website/public/images/projects/test",
+    "your-website/public/images/projects/gpt-wrapper/new",
+    "your-website/public/images/projects/gpt-wrapper",
+    "your-website/public/images/projects",
+    "your-website/public/images",
     "your-website/app/(routes)/about/loading.tsx",
     "your-website/app/(routes)/contact/loading.tsx",
     "your-website/app/(routes)/projects/[slug]/loading.tsx",
-    "your-website/app/(routes)/projects/loading.tsx",
-    "your-website/app/(routes)/blog/loading.tsx",
     "your-website/content/blog/building-my-portfolio-website.md",
-    "your-website/components/shared/ErrorBoundary.tsx",
     "website-completion-guide.md"
   ]
 }

@@ -17,12 +17,9 @@ export const projects: Project[] = [
     categories: ['AI Tools', 'Natural Language Processing', 'Developer Tools'],
     technologies: ['Python', 'OpenAI API', 'tkinter', 'JSON'],
     images: {
-      thumbnail: '/projects/gpt-wrapper/thumbnail.jpg',
-      featured: '/projects/gpt-wrapper/featured.jpg',
+      thumbnail: '/projects/gpt-wrapper/featured.png',
+      featured: '/projects/gpt-wrapper/featured.png',
       gallery: [
-        '/projects/gpt-wrapper/gui.jpg',
-        '/projects/gpt-wrapper/config.jpg',
-        '/projects/gpt-wrapper/conversation.jpg',
       ],
     },
     links: {
@@ -52,7 +49,7 @@ export const projects: Project[] = [
     categories: ['Research', 'Agile Development', 'Team Psychology', 'Data Analysis'],
     technologies: ['SPSS', 'Statistical Analysis', 'Survey Tools'],
     images: {
-      thumbnail: '/projects/default-thumb.jpg',
+      thumbnail: '/projects/agilesteps/agilemodel.png',
       featured: '/projects/default-thumb.jpg',
       gallery: ['/projects/default-thumb.jpg']
     },
