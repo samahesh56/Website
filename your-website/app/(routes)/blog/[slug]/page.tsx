@@ -101,12 +101,12 @@ const components = {
   ),
 };
 
-// Fixed function signature to properly handle params as an async context
-export default async function PostPage({
-  params,
-}: {
-  params: { slug: string }
-}) {
+// Fixed param handling for NextJS 15+ compatibility
+interface PageProps {
+  params: { slug: string };
+}
+
+export default async function PostPage({ params }: PageProps) {
   const slug = params.slug;
   
   const postData = await getPostBySlug(slug);
