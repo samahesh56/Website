@@ -170,6 +170,8 @@
   },
   "active": "0604d280a5bf798e",
   "lastOpenFiles": [
+    "your-website/lib/types/next-page.d.ts",
+    "your-website/lib/types/next-page.d",
     "your-website/components/blog/BlogClientWrapper.tsx",
     "your-website/components/Layout/ClientLayoutWrapper.tsx",
     "your-website/public/projects/portfolio/thumbnail.png",
@@ -182,8 +184,6 @@
     "your-website/public/projects/agilesteps",
     "your-website/public/projects/gpt-wrapper/featured.png",
     "your-website/public/projects/gpt-wrapper",
-    "your-website/public/images/projects/test",
-    "your-website/public/images/projects/gpt-wrapper/new",
     "your-website/content/blog/building-my-portfolio-website.md",
     "website-completion-guide.md"
   ]
