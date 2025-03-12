@@ -3,7 +3,7 @@
 
 import { Project } from '@/lib/types/project';
 import { motion } from 'framer-motion';
-import Image from 'next/image';
+import OptimizedImage from '@/components/ui/OptimizedImage';
 import Link from 'next/link';
 
 export default function ProjectContent({ project }: { project: Project }) {
@@ -72,11 +72,12 @@ export default function ProjectContent({ project }: { project: Project }) {
                 <div className="grid grid-cols-2 gap-4">
                   {project.images.gallery.map((image, index) => (
                     <div key={index} className="relative aspect-video">
-                      <Image
+                      <OptimizedImage
                         src={image}
-                        alt={`${project.title} gallery ${index + 1}`}
+                        alt={`${project.title} gallery image ${index + 1}`}
                         fill
                         className="object-cover rounded-lg"
+                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       />
                     </div>
                   ))}

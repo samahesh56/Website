@@ -65,21 +65,24 @@ export default function TransitionSection() {
                 viewport={{ once: true, margin: "-50px" }}
                 className="group hover:scale-[1.02] transition-all duration-300"
               >
-                <div className="bg-gradient-to-r from-blue-500/10 via-purple-500/10 to-blue-500/10 p-8 rounded-xl border border-blue-500/20 group-hover:border-blue-500/40 transition-colors">
+                <div className="bg-slate-800/80 backdrop-blur-sm p-8 rounded-xl border border-blue-500/30 group-hover:border-blue-500/40 transition-colors shadow-lg">
                   <div className="flex items-start gap-6">
-                    <div className="p-4 bg-blue-500/20 rounded-lg group-hover:bg-blue-500/30 transition-colors">
+                    {/* Icon container - improved contrast */}
+                    <div className="p-4 bg-blue-600/30 rounded-lg group-hover:bg-blue-600/40 transition-colors shadow-sm">
                       <span className="text-3xl">{card.icon}</span>
                     </div>
                     <div className="space-y-3">
+                      {/* No change to title since it's already white */}
                       <h3 className="text-xl font-semibold text-white">
                         {card.title}
                       </h3>
-                      <p className="text-gray-400">{card.description}</p>
+                      {/* Lighten description text */}
+                      <p className="text-gray-200">{card.description}</p>
                       <div className="flex flex-wrap gap-2">
                         {card.tags.map((tag) => (
                           <span
                             key={tag}
-                            className="px-3 py-1 bg-blue-500/20 rounded-full text-sm text-blue-300 group-hover:bg-blue-500/30 transition-colors"
+                            className="px-3 py-1 bg-blue-700/40 rounded-full text-sm text-blue-100 font-medium group-hover:bg-blue-700/50 transition-colors border border-blue-600/20"
                           >
                             {tag}
                           </span>

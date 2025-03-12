@@ -52,7 +52,7 @@ export const projects: Project[] = [
       thumbnail: '/projects/agilesteps/agilemodel.png',
       featured: '/projects/default-thumb.jpg',
       gallery: [
-
+        '/projects/agilesteps/FinalPosterMCREU.jpg'
       ]
     },
     links: {
