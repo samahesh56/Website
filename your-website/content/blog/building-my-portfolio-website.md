@@ -13,7 +13,7 @@ As a computer scientist focused on AI and its social implications, having a prof
 
 ## Collaborative Development Approach
 
-One unique aspect of this project was my collaboration with Claude 3.7 Sonnet, an AI assistant from Anthropic. As someone studying AI's potential, I wanted to experience firsthand how AI could assist in the development process:
+One unique aspect of this project was my collaboration with Claude (3.5 and 3.7 Sonnet), a LLM released by Anthropic. As someone studying AI's potential, I wanted to experience firsthand how AI could assist in the development process:
 
 - **Prompt Engineering**: I crafted detailed prompts to guide the AI in generating code and design solutions
 - **Iterative Development**: We worked through multiple iterations, with me providing feedback and direction
@@ -31,15 +31,6 @@ My goal was to create a clean, professional interface that incorporates modern w
 - **Technically robust**: Implementing modern web technologies properly
 - **Performance-oriented**: Fast loading and responsive on all devices
 
-## Technology Stack
-
-Through our collaborative process, I selected and implemented:
-
-- **Next.js 14**: For server-side rendering, static generation, and overall performance
-- **TypeScript**: For type safety and code maintainability
-- **Tailwind CSS**: For efficient styling without bloat
-- **Framer Motion**: For subtle, meaningful animations that enhance user experience
-
 ## Key Features
 
 ### Responsive Design
@@ -52,7 +43,7 @@ I implemented several interactive elements, including:
 - Subtle hover effects on interactive elements
 
 ### MDX Blog System
-For the blog section, I implemented an MDX-based system that allows me to write posts in Markdown while incorporating React components when needed. This gives me the best of both worlds: the simplicity of Markdown with the power of React.
+For the blog section, I implemented an MDX-based system that allows me to write posts in Markdown while incorporating React components when needed. 
 
 ### Contact Form
 I built a contact form with client-side validation and secure server-side processing. This allows visitors to reach out directly from the site while protecting against spam.
@@ -69,7 +60,6 @@ Initially, the network visualization on the homepage caused performance issues o
 Throughout development, I:
 - Tested components across different browsers and devices
 - Debugged issues with API integrations and component rendering
-- Used error boundaries to gracefully handle potential failures
 - Implemented comprehensive form validation with helpful error messages
 
 ### Learning Through Implementation
@@ -84,7 +74,6 @@ The development process served as a practical education in:
 As I continue to develop this site, I plan to add:
 - More interactive project demonstrations
 - Improved accessibility features
-- Performance optimizations for image loading
 
 ## Conclusion
 

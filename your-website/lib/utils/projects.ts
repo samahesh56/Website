@@ -45,7 +45,7 @@ export const projects: Project[] = [
     slug: 'agilesteps-team-analysis',
     title: 'Building Better Agile Teams',
     shortDescription: 'Investigating the impact of personality traits and team reflexivity on agile software development team performance',
-    fullDescription: `Research study examining how Big Five personality traits and team reflexivity influence agile team performance. Initial findings show team reflexivity explains 16.3% of performance variance, with personality traits increasing explained variance to 27.7%. Results suggest balanced team composition may be optimal, as high levels of certain traits like Conscientiousness and Openness could reduce reflexivity's positive effects.`,
+    fullDescription: `Research study examining how Big Five personality traits and team reflexivity influence agile team performance. This work has involved designing research protocols, implementing advanced statistical methods (including factor analysis and regression modeling using SPSS), and interpreting complex data to develop actionable insights. The experience has strengthened my understanding of rigorous research methodologies and provided valuable insight into how human factors influence technological environments, offering a foundation for AI-focused research. `,
     categories: ['Research', 'Agile Development', 'Team Psychology', 'Data Analysis'],
     technologies: ['SPSS', 'Statistical Analysis', 'Survey Tools'],
     images: {
