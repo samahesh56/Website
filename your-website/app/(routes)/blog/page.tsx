@@ -8,11 +8,13 @@ export default async function BlogPage() {
 
   return (
     <MainLayout>
-      <h1 className="text-4xl font-bold mb-8 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-        Blog
-      </h1>
-      
-      <BlogClientWrapper posts={posts} />
+      <div className="px-2 sm:px-0">
+        <h1 className="text-3xl sm:text-4xl font-bold mb-6 sm:mb-8 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+          Blog
+        </h1>
+        
+        <BlogClientWrapper posts={posts} />
+      </div>
     </MainLayout>
   );
 }

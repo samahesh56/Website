@@ -22,7 +22,7 @@ export default function BlogClientWrapper({ posts }: BlogClientWrapperProps) {
       </div>
     }>
       {posts.length > 0 ? (
-        <div className="grid gap-8 md:grid-cols-2">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 px-1">
           {posts.map(post => (
             <PostCard key={post.slug} post={post} />
           ))}

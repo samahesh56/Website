@@ -55,23 +55,31 @@ export default function Home() {
             <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center min-h-screen">
               {/* Left Content */}
               <div className="space-y-6 md:space-y-8 max-w-xl mx-auto lg:mx-0">
-                <div className="inline-block px-4 py-2 bg-blue-500/10 rounded-full border border-blue-300/20">
-                  <span className="text-blue-300 text-sm font-medium">
-                    Sankeerth Mahesh | Computer Scientist & AI Researcher
-                  </span>
+                {/* Title pill - Centered on mobile, left-aligned on desktop */}
+                <div className="flex justify-center lg:justify-start w-full">
+                  <div className="px-4 py-2 bg-blue-500/10 rounded-full border border-blue-300/20 text-center lg:text-left">
+                    <div className="text-blue-300 text-sm font-medium">
+                      <span className="block sm:inline">Sankeerth Mahesh</span>
+                      <span className="hidden sm:inline"> | </span>
+                      <span className="block sm:inline">Computer Scientist & AI Researcher</span>
+                    </div>
+                  </div>
                 </div>
 
-                <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
-                  Advancing AI for
-                  <span className="text-blue-400"> Social Impact</span>
+                {/* Heading - Centered on mobile, left-aligned on desktop */}
+                <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-center lg:text-left">
+                  Advancing AI for<br />
+                  <span className="text-blue-400">Social Impact</span>
                 </h1>
 
-                <p className="text-lg md:text-xl text-gray-300">
+                {/* Description - Centered on mobile, left-aligned on desktop */}
+                <p className="text-lg md:text-xl text-gray-300 text-center lg:text-left">
                   Learning to develop intelligent solutions that make technology
                   more practical and impactful in everyday life.
                 </p>
 
-                <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
+                {/* Buttons - Centered on mobile, normal on desktop */}
+                <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto justify-center lg:justify-start">
                   <Link
                     href="/projects"
                     className="px-6 sm:px-8 py-3 sm:py-4 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition text-center flex-1 sm:flex-none"
@@ -80,7 +88,7 @@ export default function Home() {
                   </Link>
                   <Link
                     href="/about"
-                    className="px-8 py-4 border border-blue-400 text-blue-300 rounded-lg hover:bg-blue-900/50 transition cursor-pointer text-center"
+                    className="px-6 sm:px-8 py-3 sm:py-4 border border-blue-400 text-blue-300 rounded-lg hover:bg-blue-900/50 transition cursor-pointer text-center flex-1 sm:flex-none"
                   >
                     About Me
                   </Link>

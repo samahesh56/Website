@@ -44,8 +44,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body className={`${inter.className} flex flex-col min-h-screen bg-slate-950 text-gray-100`}>
+    <html lang="en" className="overflow-x-hidden">
+      <body className={`${inter.className} flex flex-col min-h-screen bg-slate-950 text-gray-100 overflow-x-hidden w-full`}>
         <ClientLayoutWrapper>
           {children}
         </ClientLayoutWrapper>
