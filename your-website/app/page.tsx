@@ -54,7 +54,7 @@ export default function Home() {
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 w-full relative z-10">
             <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center min-h-screen">
               {/* Left Content */}
-              <div className="space-y-6 md:space-y-8 max-w-xl mx-auto lg:mx-0">
+              <div className="space-y-6 md:space-y-8 max-w-xl mx-auto lg:mx-0 lg:pl-12 xl:pl-20">
                 {/* Title pill - Centered on mobile, left-aligned on desktop */}
                 <div className="flex justify-center lg:justify-start w-full">
                   <div className="px-4 py-2 bg-blue-500/10 rounded-full border border-blue-300/20 text-center lg:text-left">

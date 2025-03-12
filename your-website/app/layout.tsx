@@ -45,7 +45,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="overflow-x-hidden">
-      <body className={`${inter.className} flex flex-col min-h-screen bg-slate-950 text-gray-100 overflow-x-hidden w-full`}>
+      <body className={`${inter.className} flex flex-col min-h-screen bg-slate-950 text-gray-100 overflow-x-hidden w-full max-w-[2000px] mx-auto`}>
         <ClientLayoutWrapper>
           {children}
         </ClientLayoutWrapper>

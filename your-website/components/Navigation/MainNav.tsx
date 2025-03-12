@@ -40,10 +40,10 @@ const MainNav = () => {
         {/* Updated container */}
         <div className="flex justify-between items-center h-16">
           {/* Logo/Name - Updated positioning and responsive sizing */}
-          <div className="flex-shrink-0 flex items-center">
+          <div className="flex-shrink-0 flex items-center ml-0 md:ml-2 lg:ml-4">
             <Link
               href="/"
-              className="text-lg sm:text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-400 hover:from-blue-500 hover:to-purple-500 transition-all"
+              className="text-lg sm:text-xl md:text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-400 hover:from-blue-500 hover:to-purple-500 transition-all whitespace-nowrap"
             >
               Sankeerth Mahesh
             </Link>
