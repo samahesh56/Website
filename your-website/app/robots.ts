@@ -6,6 +6,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: '*',
       allow: '/',
     },
-    sitemap: 'https://sankeerthmahesh.com/sitemap.xml', // Update with your domain when deployed
+    sitemap: 'https://akkumahesh.com/sitemap.xml', // Update with your domain when deployed
   };
 }

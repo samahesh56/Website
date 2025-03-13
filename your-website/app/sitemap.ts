@@ -3,7 +3,7 @@
     import { projects } from '@/lib/utils/projects';
 
     export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-        const baseUrl = 'https://sankeerthmahesh.com';
+        const baseUrl = 'https://akkumahesh.com';
         const posts = await getAllPosts();
         
         // Core pages
