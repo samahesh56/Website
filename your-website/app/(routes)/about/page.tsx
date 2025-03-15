@@ -23,7 +23,7 @@ export default function AboutPage() {
         >
           <div className="aspect-square relative rounded-xl overflow-hidden shadow-2xl ring-1 ring-blue-500/20">
           <OptimizedImage
-            src="https://placehold.co/600x600/3b82f6/ffffff?text=SM"
+            src='/projects/akkus_profile_pic.jpeg'
             alt="Sankeerth Mahesh"
             fill
             className="object-cover"
